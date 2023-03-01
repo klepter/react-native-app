@@ -9,7 +9,8 @@ import UserProfile from "./src/screens/user/UserProfile";
 import CreateEvent from "./src/screens/organizer/CreateEvent";
 import OrganizerEvents from "./src/screens/organizer/OrganizerEvents";
 import OrganizerProfile from "./src/screens/organizer/OrganizerProfile";
-import HomeIcon from "./src/ui/tabicons/HomeIcon";
+import HomeIcon from "./src/ui/tabicons/TabIcons";
+import TabIcons from "./src/ui/tabicons/TabIcons";
 
 export default function App() {
     const {user, accessToken, loading, login, logout, refresh, userType} = contextProvider();
@@ -22,9 +23,7 @@ export default function App() {
             <NavigationContainer>
                 <TabNavigator.Navigator screenOptions={({route}) => ({
                     tabBarIcon: ({focused, color, size}) => {
-                        if(route.name === 'Главная') {
-                            return <HomeIcon />
-                        }
+                        return <TabIcons name={route.name} focused={ focused }/>
                     },
                     headerShown: false,
                     tabBarOptions: {
