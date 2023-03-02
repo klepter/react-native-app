@@ -20,12 +20,12 @@ export default function Header({children}) {
 
 const styles = StyleSheet.create({
     header: {
-        height: Constants.statusBarHeight + 60,
+        marginTop: Constants.statusBarHeight,
+        height: 55,
     },
     linearGradient: {
         flex: 1,
         paddingHorizontal: 15,
         justifyContent: 'center',
-        paddingTop: Constants.statusBarHeight,
     },
 });

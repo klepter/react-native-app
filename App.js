@@ -9,7 +9,6 @@ import UserProfile from "./src/screens/user/UserProfile";
 import CreateEvent from "./src/screens/organizer/CreateEvent";
 import OrganizerEvents from "./src/screens/organizer/OrganizerEvents";
 import OrganizerProfile from "./src/screens/organizer/OrganizerProfile";
-import HomeIcon from "./src/ui/tabicons/TabIcons";
 import TabIcons from "./src/ui/tabicons/TabIcons";
 
 export default function App() {

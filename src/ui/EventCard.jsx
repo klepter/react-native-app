@@ -1,4 +1,4 @@
-import {View, Text, Image, StyleSheet, TouchableHighlight, Dimensions} from "react-native";
+import {View, Text, Image, StyleSheet, TouchableHighlight} from "react-native";
 
 export default function EventCard({event}) {
     return (
@@ -22,13 +22,13 @@ export default function EventCard({event}) {
 
 const styles = StyleSheet.create({
     eventCard: {
-        width: '50%',
+        width: '47%',
         alignItems: "center",
         marginBottom: 15
     },
     image: {
-        width: Dimensions.get('screen').width/2-30,
-        height: 150,
+        width: 170,
+        height: 160,
         borderRadius: 15,
         marginBottom: 5
     },

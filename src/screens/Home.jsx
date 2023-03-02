@@ -98,28 +98,31 @@ export default function Home() {
     // }, [fetchEvents])
 
     return (
-        <Layout>
+        <>
             <Header>
                 <SearchField/>
             </Header>
-            {/*<View style={[styles.homeCard, styles.cardGap, styles.borderBottom]}>*/}
-            {/*    <Text style={styles.cardTitle}>Важные мероприятия</Text>*/}
-            {/*</View>*/}
-            <View style={[styles.homeCard, styles.borderTop]}>
-                <Text style={styles.cardTitle}>Афиша мероприятий</Text>
-                <View style={styles.afisha}>
-                    {
-                        (events.length === 0) ?
-                            <Text>На данный момент нет ни одного мероприятия</Text> :
-                            events.map((event) => {
-                                return (
-                                    <EventCard event={event} key={event.id}/>
-                                )
-                            })
-                    }
+            <Layout style={{marginBottom: 80}}>
+                {/*<View style={[styles.homeCard, styles.cardGap, styles.borderBottom]}>*/}
+                {/*    <Text style={styles.cardTitle}>Важные мероприятия</Text>*/}
+                {/*</View>*/}
+                <View style={[styles.homeCard, styles.borderTop]}>
+                    <Text style={styles.cardTitle}>Афиша мероприятий</Text>
+                    <View style={styles.afisha}>
+                        {
+                            (events.length === 0) ?
+                                <Text>На данный момент нет ни одного мероприятия</Text> :
+                                events.map((event) => {
+                                    return (
+                                        <EventCard event={event} key={event.id}/>
+                                    )
+                                })
+                        }
+                    </View>
                 </View>
-            </View>
-        </Layout>
+            </Layout>
+        </>
+
     );
 }
 
@@ -147,6 +150,12 @@ const styles = StyleSheet.create({
     afisha: {
         flexDirection: 'row',
         flexWrap: "wrap",
-        justifyContent: "center"
+        justifyContent: 'space-between'
+    },
+    stickyHeader: {
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0
     }
 })
